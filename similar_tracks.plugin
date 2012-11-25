@@ -1,0 +1,9 @@
+[Plugin]
+Loader=python
+Module=similar_tracks
+IAge=2
+Name=Similar tracks plugin
+Description=A plugin to display similar tracks and artists to the currently playing track
+Authors=Radu Stoica <radumstoica@gmail.com>
+Copyright=Copyright (c) 2012 Radu Stoica
+Website=www.github.com/radus
