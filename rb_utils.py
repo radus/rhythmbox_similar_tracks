@@ -1,4 +1,5 @@
 from gi.repository import GdkPixbuf
+import rb
 
 def is_valid_artist(artist):
     if artist is not None and artist != "" and artist != "Unknown":
@@ -18,3 +19,7 @@ def get_image_pixbuf(image_data = None, width = 50, height = 50):
                                      GdkPixbuf.InterpType.BILINEAR)
     return pixbuf
 
+
+def get_url_async(url, callback, *args):
+    loader = rb.Loader()
+    loader.get_url(url, callback, *args)

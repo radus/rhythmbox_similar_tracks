@@ -1,9 +1,9 @@
 from gi.repository import RB
-from music_classes import SimilarArtist, SimilarTrack
+from rb_classes import SimilarArtist, SimilarTrack
 from pprint import pprint
 import urllib
 import json
-import netlib
+import rb_utils
 
 API_KEY = "1098ad8fead1da06532f3f17b1b6be8b"
 API_ROOT_URL = "http://ws.audioscrobbler.com/2.0/"
@@ -14,7 +14,7 @@ def get_similar_artists_async(artist = "", num_results = 10,
                              'artist': artist, 'limit': num_results,
                              'autocorrect': 1});
     print "Getting url %s" % url
-    netlib.get_url_async(url, similar_artists_cb, artist, 
+    rb_utils.get_url_async(url, similar_artists_cb, artist, 
                          success_callback, error_callback)
 
 
@@ -57,7 +57,7 @@ def get_similar_tracks_async(artist = "", track = "", num_results = 10,
                               'limit': num_results, 
                               'autocorrect': 1});
     print "Getting url for similar track %s" % url
-    netlib.get_url_async(url, similar_tracks_cb, track, success_callback,
+    rb_utils.get_url_async(url, similar_tracks_cb, track, success_callback,
                          error_callback)
 
 

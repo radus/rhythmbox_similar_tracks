@@ -1,8 +1,7 @@
 from view import SimilarTracksView
-from rbclasses import RBEntry
+from rb_classes import RBEntry
 import lastfm
 import rb_utils
-import netlib
 
 class SimilarTracksController:
     
@@ -99,7 +98,7 @@ class SimilarTracksController:
         Sends response to function load_image_cb
         """
         print "reading image from url %s" % image_url
-        netlib.get_url_async(image_url, self.load_image_cb, *params)
+        rb_utils.get_url_async(image_url, self.load_image_cb, *params)
 
     def load_image_cb(self, image_data, view_callback, *params):
         """
