@@ -1,5 +1,5 @@
 Rhythmbox plugin to list similar tracks and similar artists in the right sidebar.
 
-Tracks and artists are retreived from last.fm .
+Tracks and artists are retrieved from last.fm .
 
 Run ./install_similar_tracks.sh script to install.
