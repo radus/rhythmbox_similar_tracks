@@ -1,4 +1,4 @@
-from gi.repository import GdkPixbuf
+from gi.repository import GdkPixbuf, RB
 import rb
 
 def is_valid_artist(artist):
